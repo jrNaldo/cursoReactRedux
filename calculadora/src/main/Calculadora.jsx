@@ -64,6 +64,10 @@ export default class Calculator extends Component{
                 default:
                     console.log('Operação inválida')
             }
+            if (isNaN(values[0]) || !isFinite(values[0])) {
+	            this.clearMemory()
+                return
+            }
 
             values[1] = 0
             
