@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+}
+
+.text{
+    font-weight: 300;
+    font-size: 5rem;
+}
+
+.red{
+    font-weight: 700;
+    color: red;
+}
+
+.input{
+    font-size: 4rem;
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+.btn{
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 15px 35px;
+    border: none;
+    outline: none;
+    background-color: #0092c3;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
