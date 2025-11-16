@@ -12,6 +12,12 @@ const Menu = props => {
                     <li>
                         <Link to='/usestate'>UseState()</Link>
                     </li>
+                    <li>
+                        <Link to='/useeffect'>UseEffect()</Link>
+                    </li>
+                    <li>
+                        <Link to='/useref'>UseRef()</Link>
+                    </li>
                 </ul>
             </nav>
         </aside>
