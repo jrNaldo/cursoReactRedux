@@ -7,6 +7,8 @@ import NotFound from "../../views/examples/404";
 import UseState from "../../views/examples/UseState";
 import UseEffect from "../../views/examples/UseEffect";
 import UseRef from "../../views/examples/UseRef";
+import UseMemo from "../../views/examples/UseMemo";
+import UseCallback from "../../views/examples/UseCallback";
 
 const Content = props => {
     return (
@@ -17,6 +19,8 @@ const Content = props => {
                 <Route path="/usestate" element={<UseState/>}></Route>
                 <Route path="/useeffect" element={<UseEffect/>}></Route>
                 <Route path="/useref" element={<UseRef/>}></Route>
+                <Route path="/usememo" element={<UseMemo/>}></Route>
+                <Route path="/usecallback" element={<UseCallback/>}></Route>
             </Routes>
         </main>
     )

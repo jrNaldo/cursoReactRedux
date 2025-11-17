@@ -10,13 +10,19 @@ const Menu = props => {
                         <Link to="/">Inicio</Link>
                     </li>
                     <li>
-                        <Link to='/usestate'>UseState()</Link>
+                        <Link to='/usestate'>UseState( )</Link>
                     </li>
                     <li>
-                        <Link to='/useeffect'>UseEffect()</Link>
+                        <Link to='/useeffect'>UseEffect( )</Link>
                     </li>
                     <li>
-                        <Link to='/useref'>UseRef()</Link>
+                        <Link to='/useref'>UseRef( )</Link>
+                    </li>
+                    <li>
+                        <Link to='/usememo'>UseMemo( )</Link>
+                    </li>
+                    <li>
+                        <Link to='usecallback'>UseCallback( )</Link> 
                     </li>
                 </ul>
             </nav>
