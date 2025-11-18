@@ -24,6 +24,9 @@ const Menu = props => {
                     <li>
                         <Link to='usecallback'>UseCallback( )</Link> 
                     </li>
+                    <li>
+                        <Link to='usecontext'>UseContext( )</Link> 
+                    </li>
                 </ul>
             </nav>
         </aside>
