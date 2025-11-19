@@ -1,6 +1,6 @@
 import React from "react";
 import './Menu.css'
-import  {Link}from 'react-router-dom'
+import {Link} from 'react-router-dom'
 const Menu = props => {
     return (
         <aside className="Menu">
@@ -26,6 +26,9 @@ const Menu = props => {
                     </li>
                     <li>
                         <Link to='usecontext'>UseContext( )</Link> 
+                    </li>
+                    <li>
+                        <Link to='usereducer'>UseReducer( )</Link> 
                     </li>
                 </ul>
             </nav>
