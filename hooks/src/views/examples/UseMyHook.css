@@ -1,0 +1,9 @@
+.ulData {
+    list-style: none;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border-radius: .5rem;
+}
