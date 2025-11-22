@@ -16,6 +16,7 @@ export default function Inicio(){
             <Navegador destino='/navegacao' name='Navegação 1'/>
             <Navegador destino='/cliente/mg-2/123' name='Navegação 2'/>
             <Navegador destino='/estado' name='Componente com estado'/>
+            <Navegador destino='/integracao' name='Integracao com API'/>
         </div>
     )
 }

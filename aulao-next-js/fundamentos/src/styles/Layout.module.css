@@ -6,7 +6,7 @@
 
 .cabecalho{
     display: flex;
-    background-color: #00000073;
+    background-color: rgb(165, 45, 1);
     justify-content: flex-end;
     padding: 10px 20px;
 }
