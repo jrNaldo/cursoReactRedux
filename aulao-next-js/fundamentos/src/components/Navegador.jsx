@@ -3,10 +3,10 @@ import styles from '../styles/Navegador.module.css'
 
 export default function Navegador(props){
     return (
-        <div>
-            <li>
+        <nav className={styles.navegador}>
+            <li className={styles.li}>
                 <Link href={props.destino}>{props.name}</Link>
             </li>
-        </div>
+        </nav>
     )
 }

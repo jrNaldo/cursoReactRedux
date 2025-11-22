@@ -1,0 +1,14 @@
+.navegador {
+    background-color: dodgerblue;
+    margin: 10px;
+    border-radius: .5rem;
+}
+
+.li{
+    list-style: none;
+}
+
+.li a {
+    padding: 30px;
+    display: block;
+}

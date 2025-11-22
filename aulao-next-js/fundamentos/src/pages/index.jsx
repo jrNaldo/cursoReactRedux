@@ -3,13 +3,18 @@ import Link from "next/link"
 
 export default function Inicio(){
     return (
-        <div>
-            <h1>Home - React e Next.js</h1>
-            <ul>
-                <Navegador destino='/estiloso' name='Estiloso'/>
-                <Navegador destino='/exemplo' name='Exemplo'/>
-                <Navegador destino='/jsx' name='Jsx'/>
-            </ul>
+        <div style={{
+            display:'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            height: '100vh'
+        }}>
+            <Navegador destino='/estiloso' name='Estiloso'/>
+            <Navegador destino='/exemplo' name='Exemplo'/>
+            <Navegador destino='/jsx' name='Jsx'/>
+            <Navegador destino='/navegacao' name='Navegação 1'/>
+            <Navegador destino='/cliente/mg-2/123' name='Navegação 2'/>
         </div>
     )
 }
