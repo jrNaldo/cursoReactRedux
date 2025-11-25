@@ -3,18 +3,27 @@ import Formulario from "../components/Formulario";
 import Layout from "../components/Layout";
 import Tabela from "../components/Tabela";
 import Cliente from "../core/Cliente";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ClienteRepositorio from "../core/ClienteRepositorio";
+import ColecaoCliente from "../backend/db/ColecaoCliente";
 
 export default function Home() {
+
+  const repo: ClienteRepositorio = new ColecaoCliente()
   const [cliente, setCliente] = useState<Cliente>(Cliente.vazio())
+  const [clientes, setClientes] = useState<Cliente[]>([])
   const [visivel, setVisivel] = useState<'tabela' | 'form'>('tabela')
 
-    const clientes = [
-      new Cliente('Ana', 23, '1'),
-      new Cliente('Pedro', 83, '2'),
-      new Cliente('Alice', 34, '3'),
-      new Cliente('Otavio', 23, '4'),
-    ]
+  useEffect(obterTodos,[])
+  
+  
+  function obterTodos() {
+      repo.obterTodos().then(clientes => {
+        setClientes(clientes)
+        setVisivel('tabela')
+      })
+
+    }
 
     function clienteSelecionado(cliente: Cliente) {
       setCliente(cliente)
@@ -25,9 +34,9 @@ export default function Home() {
       console.log(cliente.nome)
     }
 
-    function salvarCliente(cliente: Cliente){
-      console.log(cliente)
-      setVisivel('tabela')
+    async function salvarCliente(cliente: Cliente){
+      await repo.salvar(cliente)
+      obterTodos()
     }
 
     function novoCliente(cliente: Cliente){
@@ -49,8 +58,7 @@ export default function Home() {
             <>
               <div className="flex justify-end">
                 <Botao 
-                  className="mb-4" cor='bg-gradient-to-r from-green-400 to-green-700'
-                  onClick={novoCliente}
+                  className="mb-4" cor='bg-gradient-to-r from-green-400 to-green-700' 
                 >Novo Cliente</Botao>
               </div>
               <Tabela clientes={clientes} clienteSelecionado={clienteSelecionado} clienteExcluido={clienteExcluido}></Tabela>
