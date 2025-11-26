@@ -13,9 +13,8 @@ export default function Home() {
   const [cliente, setCliente] = useState<Cliente>(Cliente.vazio())
   const [clientes, setClientes] = useState<Cliente[]>([])
   const [visivel, setVisivel] = useState<'tabela' | 'form'>('tabela')
-
-  useEffect(obterTodos,[])
   
+  useEffect(obterTodos, [])
   
   function obterTodos() {
       repo.obterTodos().then(clientes => {
@@ -30,8 +29,9 @@ export default function Home() {
       setVisivel('form')
     }
 
-    function clienteExcluido(cliente: Cliente) {
-      console.log(cliente.nome)
+    async function clienteExcluido(cliente: Cliente) {
+      await repo.excluir(cliente)
+      obterTodos()
     }
 
     async function salvarCliente(cliente: Cliente){
@@ -39,7 +39,7 @@ export default function Home() {
       obterTodos()
     }
 
-    function novoCliente(cliente: Cliente){
+    function novoCliente(){
       setCliente(Cliente.vazio())
       setVisivel('form')
     }
@@ -57,9 +57,7 @@ export default function Home() {
 
             <>
               <div className="flex justify-end">
-                <Botao 
-                  className="mb-4" cor='bg-gradient-to-r from-green-400 to-green-700' 
-                >Novo Cliente</Botao>
+                <Botao className="mb-4" cor='bg-gradient-to-r from-green-400 to-green-700' onClick={() => novoCliente()}>Novo Cliente</Botao>
               </div>
               <Tabela clientes={clientes} clienteSelecionado={clienteSelecionado} clienteExcluido={clienteExcluido}></Tabela>
             </>
