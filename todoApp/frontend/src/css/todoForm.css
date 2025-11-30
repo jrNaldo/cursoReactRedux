@@ -1,0 +1,24 @@
+.todoForm {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-control {
+    width: 90%;
+    padding: .5rem;
+    border-radius: 5px;
+    color: black;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: dodgerblue;
+    font-size: 1rem;
+    border: none;
+    margin-left: .5rem;
+    padding: .6rem .8rem;
+    border-radius: .5rem;
+}
