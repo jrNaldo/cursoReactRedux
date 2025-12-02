@@ -2,12 +2,16 @@ import express from 'express'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import Tarefas from './Tarefas.js'
+import cors from 'cors'
 
 dotenv.config()
 
 const app = express()
-const port = 5000
+const port = 3001
 // Middleware - Fução que trata informações recebidas
+app.use(cors({
+  origin: "http://localhost:3000"
+}))
 app.use(express.json())
 
 
@@ -24,6 +28,7 @@ connectDb()
 app.post("/tarefas", async (req, res) => {
     try{
         const novaTarefa = await Tarefas.create(req.body)
+        res.json(novaTarefa)
     }catch(e){
         res.send({e: e})
     }

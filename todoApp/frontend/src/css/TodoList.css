@@ -1,0 +1,18 @@
+table {
+    margin: 20px auto;
+    background-color: rgba(4, 60, 108, 0.43);
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1em;
+    width: 80%;
+    max-width: 95%;
+}
+
+.markAsDone{
+    color : rgb(74, 224, 74);
+}
+ 
+.markAsFalse{
+    color: rgb(221, 42, 42);
+}
+
