@@ -2,23 +2,26 @@ import React from "react";
 import '../css/TodoList.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faCheck, faUndo } from "@fortawesome/free-solid-svg-icons";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { MarkAsDone, MarkAsPending, Remove } from "./TodoActions";
 
-export default props => {
-
+function TodoList(props){
     const renderRows = () => {
         const list = props.list || []
+        console.log(list)
         return list.map(todo => (
                     <tr key={todo._id}>
                         <td  className={todo.done ? 'markAsDone': 'markAsFalse'}>{todo.description}</td>
                         <td className="tdAction">
                             <span>
-                                <FontAwesomeIcon icon={faTrash}  onClick={() => props.handleRemove(todo)}/>
+                                <FontAwesomeIcon icon={faTrash}  onClick={() => props.Remove(todo)}/>
                             </span>
                             <span >
-                                <FontAwesomeIcon icon={faCheck} onClick={() => props.handleMarkAsDone(todo)}/>
+                                <FontAwesomeIcon icon={faCheck} onClick={() => props.MarkAsDone(todo)}/>
                             </span>
                             <span>
-                                <FontAwesomeIcon icon={faUndo}  onClick={() => props.handleMarkAsPending(todo)}/>
+                                <FontAwesomeIcon icon={faUndo}  onClick={() => props.MarkAsPending(todo)}/>
                             </span>
                         </td>
                     </tr>
@@ -40,3 +43,8 @@ export default props => {
         </table>
     )
 }
+
+const mapStateToProps = state => ({list: state.todo.list})
+const mapDispatchToProps = dispatch => bindActionCreators({MarkAsDone, MarkAsPending, Remove}, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodoList)
