@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainTitle{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+
+.mainHeader{
+    background-color: dodgerblue;
+    padding: .56rem;
+}

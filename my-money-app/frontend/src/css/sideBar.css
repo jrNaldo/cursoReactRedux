@@ -1,0 +1,5 @@
+.mainSideBar{
+    background-color: rgb(5, 17, 85);
+    width: 15vw;
+    height: calc(100% - 45px);
+}
