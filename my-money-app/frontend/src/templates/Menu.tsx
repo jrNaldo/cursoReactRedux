@@ -6,9 +6,9 @@ import MenuTree from "./MenuTree";
 function Menu(props: any){
     return (
         <ul className="sideBarMenu mainUl">
-            <MenuItem path='#' label='Dashboard'/>
+            <MenuItem path='/' label='Dashboard'/>
             <MenuTree label="Cadastro">
-                <MenuItem path='#' label='Ciclo de Pagamentos'/>
+                <MenuItem path='/billingCycles' label='Ciclo de Pagamentos'/>
             </MenuTree>
         </ul>
     )

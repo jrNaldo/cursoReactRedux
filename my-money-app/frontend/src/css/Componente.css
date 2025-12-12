@@ -1,0 +1,19 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.Componente {
+    width: calc(100% - 230px);
+    position: absolute;
+    transform: translateX(230px);
+}
+
+.Content, .ContentHeader{
+    margin: 1rem;
+    color: gray;
+}
+
+small{
+    font-size: 1rem;
+    font-weight: 300;
+}

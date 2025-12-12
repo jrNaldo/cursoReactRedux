@@ -6,7 +6,7 @@ interface IMenuTreeProps{
 }
 
 function MenuTree(props: IMenuTreeProps){
-    const [aberto, setAberto] = useState(true)
+    const [aberto, setAberto] = useState(false)
     return (
         <li onClick={() => setAberto(!aberto)}>
             <a>{props.label}</a>
