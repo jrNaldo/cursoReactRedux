@@ -9,7 +9,7 @@ interface IValueBoxProps {
 
 function ValueBox(props: IValueBoxProps){
     return (
-        <div className={props.cor || 'red'}>
+        <div className={`grid ${props.cor || 'red'}`}>
             <div className="inner">
                 <h3>{props.value}</h3>
                 <p>{props.text}</p>

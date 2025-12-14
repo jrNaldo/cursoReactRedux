@@ -8,7 +8,25 @@
     transform: translateX(230px);
 }
 
-.Content, .ContentHeader{
+.Content{
+    margin: 1rem;
+    color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.grid{
+    padding: 20px;
+    grid-column: span 2;
+    border-radius: 10px;
+}
+
+.inner > h3{
+    font-size: 2rem;
+}
+
+.ContentHeader{
     margin: 1rem;
     color: gray;
 }
