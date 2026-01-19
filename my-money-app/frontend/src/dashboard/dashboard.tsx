@@ -24,5 +24,6 @@ class Dashboard extends Component {
     }
 }
 
+// const mapStateToProps = (state: any)
 export default Dashboard
 // export default Dashboard
